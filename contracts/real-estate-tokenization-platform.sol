@@ -12,7 +12,7 @@ contract RealEstateTokenization is ERC721, Ownable, ReentrancyGuard {
     struct Pro
         uint256 tokenId
         string propertyAddress
-        uint256 totalValue;
+        
         uint256 totalShar
         uint256 availableShares;
         uint256 pricePerShare;
