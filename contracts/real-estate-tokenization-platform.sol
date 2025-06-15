@@ -14,9 +14,7 @@ contract RealEstateTokenization is ERC721, Ownable, ReentrancyGuard {
         string propertyAddress
         
         uint256 totalShar
-        uint256 availableShares;
-        uint256 pricePerShare;
-        string metadataURI;
+        uint256 availableSha
         bool isActive;
         address propertyOwner;
     }
