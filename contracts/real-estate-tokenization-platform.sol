@@ -137,7 +137,6 @@ contract RealEstateTokenization is ERC721, Ownable, ReentrancyGuard {
         Property storage prop = properties[_tokenId];
         require(_exists(_tokenId), "Property does not exist");
         require(!prop.isActive, "Property still active");
-        require(prop.availableShares > 0, "No unsold shares");
 
         uint256 unsold = prop.availableShares;
         prop.availableShares = 0;
@@ -156,6 +155,9 @@ contract RealEstateTokenization is ERC721, Ownable, ReentrancyGuard {
         emit Paused();
     }
 
+    function pause() external onlyOwner {
+        isPaused = true;
+        emit Paused();
     function unpause() external onlyOwner {
         isPaused = false;
         emit Unpaused();
