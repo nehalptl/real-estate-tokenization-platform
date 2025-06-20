@@ -5,10 +5,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract RealEstateTokenization is ERC721, Ownable, ReentrancyGuard {
-    using Counters for Counters.Counte
-    Counters.Counter privat
-    bool public isPaused
     struct Pro
         uint256
         uint256 totalShar
