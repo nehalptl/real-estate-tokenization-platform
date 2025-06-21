@@ -48,10 +48,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
         require(bytes(_propertyAddress).length > 0, "Property address cannot be empty");
 
         _tokenIdCounter.increment();
-        uint256 newTokenId = _tokenIdCounter.current();
-
-        _safeMint(msg.sender, newTokenId);
-
+        uint256 newTokenId = _tokenIdCounter.current()
         uint256 pricePerShare = _totalValue / _totalShares;
 
         properties[newTokenId] = Property({
